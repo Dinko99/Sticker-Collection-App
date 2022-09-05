@@ -2,11 +2,14 @@ import '../Styles/AllStickers.scss'
 import CountryTitle from './CountryTitle'
 import StickerNumber from './StickerNumber'
 import countries from '../utils/countries'
-import numbers from '../utils/numbers'
+import stickers from '../utils/stickers'
 
 
 
 const AllStickers = () => {
+    const [number, collected] = stickers;
+    
+
   return (
     <main>
 
@@ -16,8 +19,8 @@ const AllStickers = () => {
                     <CountryTitle  country={country} />
                     <div className="stickers">
                 {
-                    numbers.map((number, index)=>{
-                        return <StickerNumber key={index} number={number} />
+                    stickers.map((item, index)=>{
+                        return <StickerNumber key={index} number={item.number} collected={item.collected}  />
                     })
                 }
                     </div>
