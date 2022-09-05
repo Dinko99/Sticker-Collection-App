@@ -2,6 +2,7 @@ import './App.scss';
 import AllStickers from './components/AllStickers';
 import Title from './components/Title';
 import { useState } from 'react';
+import Counter from './components/Counter';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
     <Title />
+    <Counter />
     <AllStickers />
     </>
   );
