@@ -1,0 +1,43 @@
+main {
+    margin-inline: auto;
+    width: 90%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .stickers-section:first-child{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .stickers-section:last-child{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+
+    .stickers-section{
+        background: linear-gradient(360deg,#224e4d 10%,#083023 360%);
+        color: #fff;
+        padding: 15px;
+        ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+
+            .country-title {
+                text-transform: uppercase;
+            }
+        
+
+
+        .stickers{
+            
+            margin-top: 1rem;
+            display: flex;
+            gap: 30px;
+        }
+    }
+}

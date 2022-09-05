@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  // FONTS
+
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-title: 'Rubik', sans-serif;
+
+  // COLORS
+
+  --clr-green-primary: #254D19;
+  --clr-green-secondary: #4A9A32;
+}
+
+body{
+  font-family: var(--ff-primary);
+}
