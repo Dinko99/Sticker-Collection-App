@@ -1,11 +1,11 @@
 import '../Styles/Counter.scss'
 
-const Counter = () => {
+const Counter = ({overall, stickersCollected}) => {
   return (
     <div className="counter">
-        <h3>Overall: 700</h3>
-        <h3>Collected: 500</h3>
-        <h3>Missing: 200</h3>
+        <h3>Overall: {overall}</h3>
+        <h3>Collected: {stickersCollected}</h3>
+        <h3>Missing: {overall - stickersCollected}</h3>
     </div>
   )
 }
