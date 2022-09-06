@@ -7,9 +7,8 @@ import countries from './utils/countries'
 
 
 function App() {
-  const [isCollected, setIsCollected] = useState(false)
   const [stickersCollected, setStickersCollected] = useState(0);
-  let overall = countries.length * 19;
+  let overall = countries.length * 19 + 38;
 
   return (
     <>

@@ -1,8 +1,6 @@
-
-
-const CountryCard = ({country}) => {
+const CountryCard = ({title}) => {
   return (
-    <h3 className='country-title'>{country}</h3>
+    <h3 className='country-title'>{title}</h3>
   )
 }
 
