@@ -1,75 +1,70 @@
 main {
-    margin-inline: auto;
-    width: 90%;
-    margin-top: 4rem;
+  margin-inline: auto;
+  width: 90%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  .stickers-section:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .stickers-section:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .stickers-section {
+    background: linear-gradient(360deg, #224e4d 10%, #083023 360%);
+    color: #fff;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 3rem;
+    align-items: center;
 
-    .stickers-section:first-child{
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+    .country-title {
+      text-transform: uppercase;
     }
 
-    .stickers-section:last-child{
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-    
+    .stickers {
+      margin-top: 1rem;
+      display: flex;
+      gap: 30px;
 
-    .stickers-section{
-        background: linear-gradient(360deg,#224e4d 10%,#083023 360%);
-        color: #fff;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        
+      .sticker-number {
+        position: relative;
+        font-weight: 600;
+        cursor: pointer;
 
-            .country-title {
-                text-transform: uppercase;
-            }
-        
-
-
-        .stickers{
-            margin-top: 1rem;
-            display: flex;
-            gap: 30px;
-
-            .sticker-number{
-                position: relative;
-                font-weight: 600;
-                cursor: pointer;
-
-                .checkmark{
-                    position: absolute;
-                    left: -5px;
-                    top: -8px;
-                    font-size: 1.8rem;
-                }
-            }
+        .checkmark {
+          position: absolute;
+          left: -5px;
+          top: -8px;
+          font-size: 1.8rem;
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 950px) {
-    main{
-        .stickers-section{
-            .stickers{
-                gap: 20px;
-            }
-        }
+  main {
+    .stickers-section {
+      .stickers {
+        gap: 20px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 750px) {
-    main{
-        .stickers-section{
-            .stickers{
-                flex-wrap: wrap;
-            }
-        }
+  main {
+    .stickers-section {
+      .stickers {
+        flex-wrap: wrap;
+      }
     }
+  }
 }
