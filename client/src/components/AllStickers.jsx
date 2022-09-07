@@ -9,6 +9,8 @@ import cocaCola from '../utils/cocaCola';
 const AllStickers = ({ countries, setStickersCollected }) => {
   return (
     <main>
+      {/* fwc front  */}
+
       <div className='stickers-section'>
         <CountryTitle title='fwc' />
         <div className='stickers'>
@@ -20,11 +22,16 @@ const AllStickers = ({ countries, setStickersCollected }) => {
                 key={index}
                 number={number}
                 setStickersCollected={setStickersCollected}
+                index={index}
+                country='fwcFront'
               />
             );
           })}
         </div>
       </div>
+
+      {/* countries  */}
+
       {countries.map((country, index) => {
         return (
           <div key={index} className='stickers-section'>
@@ -36,6 +43,8 @@ const AllStickers = ({ countries, setStickersCollected }) => {
                     key={index}
                     number={item}
                     setStickersCollected={setStickersCollected}
+                    index={index}
+                    country={country}
                   />
                 );
               })}
@@ -43,6 +52,9 @@ const AllStickers = ({ countries, setStickersCollected }) => {
           </div>
         );
       })}
+
+      {/* fwc back  */}
+
       <div className='stickers-section'>
         <CountryTitle title='fwc' />
         <div className='stickers'>
@@ -52,9 +64,13 @@ const AllStickers = ({ countries, setStickersCollected }) => {
                 key={index}
                 number={number}
                 setStickersCollected={setStickersCollected}
+                index={index}
+                country='fwcBack'
               />
             );
           })}
+
+          {/* cocacola  */}
         </div>
       </div>
       <div className='stickers-section'>
@@ -66,6 +82,8 @@ const AllStickers = ({ countries, setStickersCollected }) => {
                 key={index}
                 number={number}
                 setStickersCollected={setStickersCollected}
+                index={index}
+                country='cocacola'
               />
             );
           })}

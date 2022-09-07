@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { FcCheckmark } from 'react-icons/fc';
 
-const StickerNumber = ({ number, setStickersCollected }) => {
+const StickerNumber = ({ number, setStickersCollected, index, country }) => {
   const [isCollected, setIsCollected] = useState(
-    JSON.parse(localStorage.getItem('isCollected')) || false
+    JSON.parse(localStorage.getItem(`${country}${index}`)) || false
   );
 
   useEffect(() => {
-    window.localStorage.setItem('isCollected', JSON.stringify(isCollected));
+    window.localStorage.setItem(
+      `${country}${index}`,
+      JSON.stringify(isCollected)
+    );
   }, [isCollected]);
 
   const handleClick = (e) => {
